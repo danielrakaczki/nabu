@@ -1,29 +1,35 @@
-import { supabase } from "@/lib/supabase";
-import { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { useGetCollectionsQuery } from "@/lib/generatedApi";
+import { RefreshControl, ScrollView, Text } from "react-native";
 
 export default function Index() {
-  const [collections, setCollections] = useState<any[]>([])
-  const [error, setError] = useState<string | null>(null)
+  const {
+    data: collections,
+    error,
+    refetch,
+    isFetching,
+  } = useGetCollectionsQuery({});
 
-  useEffect(() => {
-    supabase
-      .from('collections')
-      .select('id, name, is_public')
-      .then(({ data, error }) => {
-        if (error) setError(error.message)
-        else setCollections(data || [])
-      })
-  }, [])
+  console.log("error", error);
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {error && <Text style={{ color: 'red' }}>{error}</Text>}
-      {collections.map(col => (
+    <ScrollView
+      style={{ flex: 1 }}
+      refreshControl={
+        <RefreshControl
+          refreshing={isFetching}
+          onRefresh={() => {
+            refetch();
+          }}
+        />
+      }
+      contentContainerStyle={{ justifyContent: "center", alignItems: "center" }}
+    >
+      {/* {error && <Text style={{ color: 'red' }}>{error?.status}</Text>} */}
+      {collections?.map((col) => (
         <Text key={col.id}>
-          {col.name} ({col.is_public ? 'public' : 'private'})
+          {col.name} ({col.is_public ? "public" : "private"})
         </Text>
       ))}
-    </View>
-  )
+    </ScrollView>
+  );
 }
