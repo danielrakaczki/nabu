@@ -6,7 +6,7 @@ if (!baseUrl) {
 }
 
 module.exports = {
-  schemaFile: `${baseUrl}/rest/v1/`,
+  schemaFile: `${baseUrl}/rest/v1/?openapi`,
   apiFile: './lib/emptyApi.ts',
   apiImport: 'emptySplitApi',
   outputFile: './lib/generatedApi.ts',
