@@ -10,7 +10,8 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "build": "eas build --platform ios --profile development"
+    "build": "eas build --platform ios --profile development",
+    "generate:api": "npx --no-warnings @rtk-query/codegen-openapi openapi-config.cjs"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -48,7 +49,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@rtk-query/codegen-openapi": "^2.0.0",
     "@types/react": "~19.0.10",
+    "dotenv-flow": "^4.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "supabase": "2.22.12",
