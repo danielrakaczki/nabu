@@ -20,6 +20,3 @@ module.exports = {
     }
   }
 }
-
-// curl call
-// curl -X GET 'https://your-supabase-url/rest/v1/your-table
