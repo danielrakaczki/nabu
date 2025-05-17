@@ -35,6 +35,249 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "ios": {
+            "fonts": [
+              "./assets/fonts/Inter-Thin.otf",
+              "./assets/fonts/Inter-ExtraLight.otf",
+              "./assets/fonts/Inter-Light.otf",
+              "./assets/fonts/Inter-Regular.otf",
+              "./assets/fonts/Inter-Medium.otf",
+              "./assets/fonts/Inter-SemiBold.otf",
+              "./assets/fonts/Inter-Bold.otf",
+              "./assets/fonts/Inter-ExtraBold.otf",
+              "./assets/fonts/Inter-Black.otf",
+
+              "./assets/fonts/Inter-ThinItalic.otf",
+              "./assets/fonts/Inter-ExtraLightItalic.otf",
+              "./assets/fonts/Inter-LightItalic.otf",
+              "./assets/fonts/Inter-Italic.otf",
+              "./assets/fonts/Inter-MediumItalic.otf",
+              "./assets/fonts/Inter-SemiBoldItalic.otf",
+              "./assets/fonts/Inter-BoldItalic.otf",
+              "./assets/fonts/Inter-ExtraBoldItalic.otf",
+              "./assets/fonts/Inter-BlackItalic.otf",
+
+              "./assets/fonts/InterDisplay-Thin.otf",
+              "./assets/fonts/InterDisplay-ExtraLight.otf",
+              "./assets/fonts/InterDisplay-Light.otf",
+              "./assets/fonts/InterDisplay-Regular.otf",
+              "./assets/fonts/InterDisplay-Medium.otf",
+              "./assets/fonts/InterDisplay-SemiBold.otf",
+              "./assets/fonts/InterDisplay-Bold.otf",
+              "./assets/fonts/InterDisplay-ExtraBold.otf",
+              "./assets/fonts/InterDisplay-Black.otf",
+
+              "./assets/fonts/InterDisplay-ThinItalic.otf",
+              "./assets/fonts/InterDisplay-ExtraLightItalic.otf",
+              "./assets/fonts/InterDisplay-LightItalic.otf",
+              "./assets/fonts/InterDisplay-Italic.otf",
+              "./assets/fonts/InterDisplay-MediumItalic.otf",
+              "./assets/fonts/InterDisplay-SemiBoldItalic.otf",
+              "./assets/fonts/InterDisplay-BoldItalic.otf",
+              "./assets/fonts/InterDisplay-ExtraBoldItalic.otf",
+              "./assets/fonts/InterDisplay-BlackItalic.otf"
+            ]
+          },
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Inter",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/Inter-Thin.otf",
+                    "weight": "100",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-ExtraLight.otf",
+                    "weight": "200",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Light.otf",
+                    "weight": "300",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Regular.otf",
+                    "weight": "400",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Medium.otf",
+                    "weight": "500",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-SemiBold.otf",
+                    "weight": "600",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Bold.otf",
+                    "weight": "700",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-ExtraBold.otf",
+                    "weight": "800",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Black.otf",
+                    "weight": "900",
+                    "style": "normal"
+                  },
+
+                  {
+                    "path": "./assets/fonts/Inter-ThinItalic.otf",
+                    "weight": "100",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-ExtraLightItalic.otf",
+                    "weight": "200",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-LightItalic.otf",
+                    "weight": "300",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-Italic.otf",
+                    "weight": "400",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-MediumItalic.otf",
+                    "weight": "500",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-SemiBoldItalic.otf",
+                    "weight": "600",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-BoldItalic.otf",
+                    "weight": "700",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-ExtraBoldItalic.otf",
+                    "weight": "800",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/Inter-BlackItalic.otf",
+                    "weight": "900",
+                    "style": "italic"
+                  }
+                ]
+              },
+              {
+                "fontFamily": "InterDisplay",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/InterDisplay-Thin.otf",
+                    "weight": "100",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-ExtraLight.otf",
+                    "weight": "200",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Light.otf",
+                    "weight": "300",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Regular.otf",
+                    "weight": "400",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Medium.otf",
+                    "weight": "500",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-SemiBold.otf",
+                    "weight": "600",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Bold.otf",
+                    "weight": "700",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-ExtraBold.otf",
+                    "weight": "800",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Black.otf",
+                    "weight": "900",
+                    "style": "normal"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-ThinItalic.otf",
+                    "weight": "100",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-ExtraLightItalic.otf",
+                    "weight": "200",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-LightItalic.otf",
+                    "weight": "300",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-Italic.otf",
+                    "weight": "400",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-MediumItalic.otf",
+                    "weight": "500",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-SemiBoldItalic.otf",
+                    "weight": "600",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-BoldItalic.otf",
+                    "weight": "700",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-ExtraBoldItalic.otf",
+                    "weight": "800",
+                    "style": "italic"
+                  },
+                  {
+                    "path": "./assets/fonts/InterDisplay-BlackItalic.otf",
+                    "weight": "900",
+                    "style": "italic"
+                  }
+                ]
+              }
+            ]
+          }
+        }
       ]
     ],
     "experiments": {
