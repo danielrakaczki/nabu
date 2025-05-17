@@ -1998,17 +1998,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-async-storage/async-storage@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@react-native-async-storage/async-storage@npm:2.1.2"
-  dependencies:
-    merge-options: "npm:^3.0.4"
-  peerDependencies:
-    react-native: ^0.0.0-0 || >=0.65 <1.0
-  checksum: 10c0/8f3d6ff1b32ef8705c5c8be8248988cfbfd571c0e8142b8aef15429f13ddc9a018792b4be837215f6592c76b9cd99a931d4f0ab4182eebd8bddede458d484053
-  languageName: node
-  linkType: hard
-
 "@react-native/assets-registry@npm:0.79.2":
   version: 0.79.2
   resolution: "@react-native/assets-registry@npm:0.79.2"
@@ -6368,13 +6357,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-plain-obj@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "is-plain-obj@npm:2.1.0"
-  checksum: 10c0/e5c9814cdaa627a9ad0a0964ded0e0491bfd9ace405c49a5d63c88b30a162f1512c069d5b80997893c4d0181eadc3fed02b4ab4b81059aba5620bfcdfdeb9c53
-  languageName: node
-  linkType: hard
-
 "is-promise@npm:^4.0.0":
   version: 4.0.0
   resolution: "is-promise@npm:4.0.0"
@@ -7126,15 +7108,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"merge-options@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "merge-options@npm:3.0.4"
-  dependencies:
-    is-plain-obj: "npm:^2.1.0"
-  checksum: 10c0/02b5891ceef09b0b497b5a0154c37a71784e68ed71b14748f6fd4258ffd3fe4ecd5cb0fd6f7cae3954fd11e7686c5cb64486daffa63c2793bbe8b614b61c7055
-  languageName: node
-  linkType: hard
-
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -7582,7 +7555,6 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.27.1"
     "@expo/vector-icons": "npm:^14.1.0"
-    "@react-native-async-storage/async-storage": "npm:2.1.2"
     "@react-navigation/bottom-tabs": "npm:^7.3.10"
     "@react-navigation/elements": "npm:^2.4.2"
     "@react-navigation/native": "npm:^7.1.6"
@@ -7613,6 +7585,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     react-native: "npm:0.79.2"
     react-native-gesture-handler: "npm:~2.24.0"
+    react-native-mmkv: "npm:^3.2.0"
     react-native-reanimated: "npm:~3.17.4"
     react-native-safe-area-context: "npm:5.4.0"
     react-native-screens: "npm:~4.10.0"
@@ -8594,6 +8567,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10c0/b7a37437f439b1e27a4d980de01994aa71b9091dc3ed00c21172d5505fb11978cd5ed3a43f97c89d502a3a08cf26e5cea6435b8d6e93d3557a92dd43563f7021
+  languageName: node
+  linkType: hard
+
+"react-native-mmkv@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "react-native-mmkv@npm:3.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/41abc5b46d61de7bf0f6af0ed66fab19a391d3fdc30b011cc49ba4dce65ab7c7b1c53eda768bc71f718543e89c7d46848dab2cd537b2af39afd624a8b4f0fec4
   languageName: node
   linkType: hard
 
