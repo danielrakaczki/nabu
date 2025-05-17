@@ -1,7 +1,9 @@
+import { AppRefreshControl } from "@/components/app-refresh-control";
+import { AppScrollView } from "@/components/app-scroll-view";
+import { AppText } from "@/components/app-text";
 import { useGetCollectionsQuery } from "@/lib/generatedApi";
-import { RefreshControl, ScrollView, Text } from "react-native";
 
-export default function Index() {
+export default function Home() {
   const {
     data: collections,
     error,
@@ -12,10 +14,10 @@ export default function Index() {
   console.log("error", error);
 
   return (
-    <ScrollView
+    <AppScrollView
       style={{ flex: 1 }}
       refreshControl={
-        <RefreshControl
+        <AppRefreshControl
           refreshing={isFetching}
           onRefresh={() => {
             refetch();
@@ -24,12 +26,13 @@ export default function Index() {
       }
       contentContainerStyle={{ justifyContent: "center", alignItems: "center" }}
     >
+      <AppText>Title</AppText>
       {/* {error && <Text style={{ color: 'red' }}>{error?.status}</Text>} */}
       {collections?.map((col) => (
-        <Text key={col.id}>
+        <AppText key={col.id}>
           {col.name} ({col.is_public ? "public" : "private"})
-        </Text>
+        </AppText>
       ))}
-    </ScrollView>
+    </AppScrollView>
   );
 }
