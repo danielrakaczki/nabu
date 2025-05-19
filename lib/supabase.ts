@@ -5,7 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 import { MMKV } from "react-native-mmkv";
 
 const storage = new MMKV({ id: "supabase_auth" });
-export const mmkvStorage: Storage = {
+const mmkvStorage: Storage = {
   setItem: (key, value) => {
     storage.set(key, value);
     return Promise.resolve(true);
@@ -31,3 +31,5 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     detectSessionInUrl: false,
   },
 });
+
+export const clearSupabaseStorage = () => storage.clearAll();

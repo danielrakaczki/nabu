@@ -1,4 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { useAuthWeb } from "@/lib/hooks/use-auth-web";
 import { setSession } from "@/lib/store/auth-slice";
 import { supabase } from "@/lib/supabase";
 import { Slot, SplashScreen } from "expo-router";
@@ -7,16 +8,13 @@ import { AppState } from "react-native";
 
 export default function AppLayout() {
   const isInitialized = useAppSelector((state) => state.auth.isInitialized);
+  const { __quickSignIn } = useAuthWeb();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (__DEV__ && process.env.EXPO_PUBLIC_QUICK_SIGN_IN && process.env.EXPO_PUBLIC_DEV_EMAIL && process.env.EXPO_PUBLIC_DEV_PASSWORD) {
-      console.log("Quick sign in enabled");
-      supabase.auth.signInWithPassword({ email: process.env.EXPO_PUBLIC_DEV_EMAIL, password: process.env.EXPO_PUBLIC_DEV_PASSWORD }).then(console.log).catch(console.error);
-    }
-
     supabase.auth.getSession().then(({ data: { session } }) => {
       dispatch(setSession(session));
+      if (!session) __quickSignIn();
     });
     supabase.auth.onAuthStateChange((_event, session) => {
       dispatch(setSession(session));
@@ -24,8 +22,10 @@ export default function AppLayout() {
 
     const subscription = AppState.addEventListener("change", (state) => {
       if (state === "active") {
+        console.log("start auto refresh");
         supabase.auth.startAutoRefresh();
       } else {
+        console.log("stop auto refresh");
         supabase.auth.stopAutoRefresh();
       }
     });

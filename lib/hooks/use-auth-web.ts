@@ -53,8 +53,15 @@ export function useAuthWeb() {
   const signInWithApple = () => {
     return signIn("apple");
   };
+  const __quickSignIn = async () => {
+    if (__DEV__ && process.env.EXPO_PUBLIC_QUICK_SIGN_IN && process.env.EXPO_PUBLIC_DEV_EMAIL && process.env.EXPO_PUBLIC_DEV_PASSWORD) {
+      console.log("Quick sign in enabled");
+      return supabase.auth.signInWithPassword({ email: process.env.EXPO_PUBLIC_DEV_EMAIL, password: process.env.EXPO_PUBLIC_DEV_PASSWORD }).then(console.log);
+    }
+  };
 
   return {
+    __quickSignIn,
     signInWithGoogle,
     signInWithApple,
     isSignInLoading,
