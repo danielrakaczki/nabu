@@ -1,20 +1,22 @@
 import "react-native-url-polyfill/auto";
+import { Storage } from "redux-persist";
 
 import { createClient } from "@supabase/supabase-js";
-import { AppState } from "react-native";
 import { MMKV } from "react-native-mmkv";
 
 const storage = new MMKV({ id: "supabase_auth" });
-const mmkvStorage = {
-  getItem: (key: string) => {
+export const mmkvStorage: Storage = {
+  setItem: (key, value) => {
+    storage.set(key, value);
+    return Promise.resolve(true);
+  },
+  getItem: (key) => {
     const value = storage.getString(key);
-    return value ? JSON.parse(value) : null;
+    return Promise.resolve(value);
   },
-  setItem: (key: string, value: any) => {
-    storage.set(key, JSON.stringify(value));
-  },
-  removeItem: (key: string) => {
+  removeItem: (key) => {
     storage.delete(key);
+    return Promise.resolve();
   },
 };
 
@@ -28,17 +30,4 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     persistSession: true,
     detectSessionInUrl: false,
   },
-});
-
-// Tells Supabase Auth to continuously refresh the session automatically
-// if the app is in the foreground. When this is added, you will continue
-// to receive `onAuthStateChange` events with the `TOKEN_REFRESHED` or
-// `SIGNED_OUT` event if the user's session is terminated. This should
-// only be registered once.
-AppState.addEventListener("change", (state) => {
-  if (state === "active") {
-    supabase.auth.startAutoRefresh();
-  } else {
-    supabase.auth.stopAutoRefresh();
-  }
 });
