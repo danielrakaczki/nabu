@@ -1447,7 +1447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/fingerprint@npm:0.12.4":
+"@expo/fingerprint@npm:0.12.4, @expo/fingerprint@npm:~0.12.4":
   version: 0.12.4
   resolution: "@expo/fingerprint@npm:0.12.4"
   dependencies:
@@ -1995,6 +1995,23 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/f1455f36479e87a0a2254fc2e2b2aba6740d1fbcada949071210bf2a009a031ad508ac01b544bce96337bcca82f49531b46c71615141a5985aaa11ae69b967b1
+  languageName: node
+  linkType: hard
+
+"@react-native-google-signin/google-signin@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "@react-native-google-signin/google-signin@npm:14.0.1"
+  peerDependencies:
+    expo: ">=52.0.40"
+    react: "*"
+    react-dom: "*"
+    react-native: "*"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/fe816f80608b031401e423628f4584d525acbf4ef71b6d97ee6397545969d21d8eafe6ff0e6529c60cca1245863bcead9495a074563488b3f0137449c16bb9e7
   languageName: node
   linkType: hard
 
@@ -3878,6 +3895,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"com.danielrakaczki.nabu@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "com.danielrakaczki.nabu@workspace:."
+  dependencies:
+    "@babel/core": "npm:^7.27.1"
+    "@expo/fingerprint": "npm:~0.12.4"
+    "@expo/vector-icons": "npm:^14.1.0"
+    "@react-native-google-signin/google-signin": "npm:^14.0.1"
+    "@react-navigation/bottom-tabs": "npm:^7.3.10"
+    "@react-navigation/elements": "npm:^2.4.2"
+    "@react-navigation/native": "npm:^7.1.6"
+    "@reduxjs/toolkit": "npm:^2.8.2"
+    "@rtk-query/codegen-openapi": "npm:^2.0.0"
+    "@supabase/supabase-js": "npm:^2.49.4"
+    "@types/react": "npm:~19.0.10"
+    dotenv-flow: "npm:^4.1.0"
+    eslint: "npm:^9.27.0"
+    eslint-config-expo: "npm:~9.2.0"
+    expo: "npm:~53.0.9"
+    expo-apple-authentication: "npm:~7.2.4"
+    expo-auth-session: "npm:~6.1.5"
+    expo-blur: "npm:~14.1.4"
+    expo-constants: "npm:~17.1.6"
+    expo-crypto: "npm:~14.1.4"
+    expo-dev-client: "npm:~5.1.8"
+    expo-font: "npm:~13.3.1"
+    expo-haptics: "npm:~14.1.4"
+    expo-image: "npm:~2.1.7"
+    expo-linking: "npm:~7.1.5"
+    expo-router: "npm:~5.0.7"
+    expo-splash-screen: "npm:~0.30.8"
+    expo-status-bar: "npm:~2.2.3"
+    expo-symbols: "npm:~0.4.4"
+    expo-system-ui: "npm:~5.0.7"
+    expo-web-browser: "npm:~14.1.6"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-native: "npm:0.79.2"
+    react-native-gesture-handler: "npm:~2.24.0"
+    react-native-mmkv: "npm:^3.2.0"
+    react-native-reanimated: "npm:~3.17.4"
+    react-native-safe-area-context: "npm:5.4.0"
+    react-native-screens: "npm:~4.10.0"
+    react-native-url-polyfill: "npm:^2.0.0"
+    react-native-web: "npm:~0.20.0"
+    react-native-webview: "npm:13.13.5"
+    react-redux: "npm:^9.2.0"
+    supabase: "npm:2.23.1"
+    typescript: "npm:~5.8.3"
+  languageName: unknown
+  linkType: soft
+
 "commander@npm:^12.0.0":
   version: 12.1.0
   resolution: "commander@npm:12.1.0"
@@ -4912,6 +4981,16 @@ __metadata:
   version: 2.2.0
   resolution: "exec-async@npm:2.2.0"
   checksum: 10c0/9c70693a3d9f53e19cc8ecf26c3b3fc7125bf40051a71cba70d71161d065a6091d3ab1924c56ac1edd68cb98b9fbef29f83e45dcf67ee6b6c4826e0f898ac039
+  languageName: node
+  linkType: hard
+
+"expo-apple-authentication@npm:~7.2.4":
+  version: 7.2.4
+  resolution: "expo-apple-authentication@npm:7.2.4"
+  peerDependencies:
+    expo: "*"
+    react-native: "*"
+  checksum: 10c0/466270514595f267731e3ae0077ed36a944348d2f474333f9feafd88133f2bf1e609fbd8e5660771f80152ca9c164e4d12c7783261b7dc4185f3350a2730db06
   languageName: node
   linkType: hard
 
@@ -7548,55 +7627,6 @@ __metadata:
   checksum: 10c0/103114e93f87362f0b56ab5b2e7245051ad0276b646e3902c98397d18bb8f4a77f2ea4a2c9d3ad516034ea3a56553b60d3f5f78220001ca4c404bd711bd0af39
   languageName: node
   linkType: hard
-
-"nabu@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "nabu@workspace:."
-  dependencies:
-    "@babel/core": "npm:^7.27.1"
-    "@expo/vector-icons": "npm:^14.1.0"
-    "@react-navigation/bottom-tabs": "npm:^7.3.10"
-    "@react-navigation/elements": "npm:^2.4.2"
-    "@react-navigation/native": "npm:^7.1.6"
-    "@reduxjs/toolkit": "npm:^2.8.2"
-    "@rtk-query/codegen-openapi": "npm:^2.0.0"
-    "@supabase/supabase-js": "npm:^2.49.4"
-    "@types/react": "npm:~19.0.10"
-    dotenv-flow: "npm:^4.1.0"
-    eslint: "npm:^9.27.0"
-    eslint-config-expo: "npm:~9.2.0"
-    expo: "npm:~53.0.9"
-    expo-auth-session: "npm:~6.1.5"
-    expo-blur: "npm:~14.1.4"
-    expo-constants: "npm:~17.1.6"
-    expo-crypto: "npm:~14.1.4"
-    expo-dev-client: "npm:~5.1.8"
-    expo-font: "npm:~13.3.1"
-    expo-haptics: "npm:~14.1.4"
-    expo-image: "npm:~2.1.7"
-    expo-linking: "npm:~7.1.5"
-    expo-router: "npm:~5.0.7"
-    expo-splash-screen: "npm:~0.30.8"
-    expo-status-bar: "npm:~2.2.3"
-    expo-symbols: "npm:~0.4.4"
-    expo-system-ui: "npm:~5.0.7"
-    expo-web-browser: "npm:~14.1.6"
-    react: "npm:19.0.0"
-    react-dom: "npm:19.0.0"
-    react-native: "npm:0.79.2"
-    react-native-gesture-handler: "npm:~2.24.0"
-    react-native-mmkv: "npm:^3.2.0"
-    react-native-reanimated: "npm:~3.17.4"
-    react-native-safe-area-context: "npm:5.4.0"
-    react-native-screens: "npm:~4.10.0"
-    react-native-url-polyfill: "npm:^2.0.0"
-    react-native-web: "npm:~0.20.0"
-    react-native-webview: "npm:13.13.5"
-    react-redux: "npm:^9.2.0"
-    supabase: "npm:2.23.1"
-    typescript: "npm:~5.8.3"
-  languageName: unknown
-  linkType: soft
 
 "nanoid@npm:^3.3.11, nanoid@npm:^3.3.7":
   version: 3.3.11

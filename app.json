@@ -5,12 +5,13 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "nabu",
+    "scheme": "com.danielrakaczki.nabu",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.nabu"
+      "bundleIdentifier": "com.danielrakaczki.nabu",
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +19,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.nabu"
+      "package": "com.danielrakaczki.nabu"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +35,18 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.1090503450022-cui3akkq7spct5m62bl6je9um2v8qk6v"
+        }
+      ],
+      [
+        "expo-web-browser",
+        {
+          "experimentalLauncherActivity": true
         }
       ],
       [
@@ -278,7 +291,8 @@
             ]
           }
         }
-      ]
+      ],
+      "expo-apple-authentication"
     ],
     "experiments": {
       "typedRoutes": true

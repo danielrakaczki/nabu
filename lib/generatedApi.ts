@@ -4,10 +4,7 @@ const injectedRtkApi = api.injectEndpoints({
     $get: build.query<$getApiResponse, $getApiArg>({
       query: () => ({ url: `/` }),
     }),
-    getCollections: build.query<
-      GetCollectionsApiResponse,
-      GetCollectionsApiArg
-    >({
+    getCollections: build.query<GetCollectionsApiResponse, GetCollectionsApiArg>({
       query: (queryArg) => ({
         url: `/collections`,
         headers: {
@@ -31,10 +28,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    postCollections: build.mutation<
-      PostCollectionsApiResponse,
-      PostCollectionsApiArg
-    >({
+    postCollections: build.mutation<PostCollectionsApiResponse, PostCollectionsApiArg>({
       query: (queryArg) => ({
         url: `/collections`,
         method: "POST",
@@ -47,10 +41,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteCollections: build.mutation<
-      DeleteCollectionsApiResponse,
-      DeleteCollectionsApiArg
-    >({
+    deleteCollections: build.mutation<DeleteCollectionsApiResponse, DeleteCollectionsApiArg>({
       query: (queryArg) => ({
         url: `/collections`,
         method: "DELETE",
@@ -69,10 +60,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    patchCollections: build.mutation<
-      PatchCollectionsApiResponse,
-      PatchCollectionsApiArg
-    >({
+    patchCollections: build.mutation<PatchCollectionsApiResponse, PatchCollectionsApiArg>({
       query: (queryArg) => ({
         url: `/collections`,
         method: "PATCH",
@@ -128,10 +116,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteProfiles: build.mutation<
-      DeleteProfilesApiResponse,
-      DeleteProfilesApiArg
-    >({
+    deleteProfiles: build.mutation<DeleteProfilesApiResponse, DeleteProfilesApiArg>({
       query: (queryArg) => ({
         url: `/profiles`,
         method: "DELETE",
@@ -149,10 +134,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    patchProfiles: build.mutation<
-      PatchProfilesApiResponse,
-      PatchProfilesApiArg
-    >({
+    patchProfiles: build.mutation<PatchProfilesApiResponse, PatchProfilesApiArg>({
       query: (queryArg) => ({
         url: `/profiles`,
         method: "PATCH",
@@ -207,10 +189,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteWidgets: build.mutation<
-      DeleteWidgetsApiResponse,
-      DeleteWidgetsApiArg
-    >({
+    deleteWidgets: build.mutation<DeleteWidgetsApiResponse, DeleteWidgetsApiArg>({
       query: (queryArg) => ({
         url: `/widgets`,
         method: "DELETE",
@@ -247,10 +226,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    getCollectionHistory: build.query<
-      GetCollectionHistoryApiResponse,
-      GetCollectionHistoryApiArg
-    >({
+    getCollectionHistory: build.query<GetCollectionHistoryApiResponse, GetCollectionHistoryApiArg>({
       query: (queryArg) => ({
         url: `/collection_history`,
         headers: {
@@ -276,10 +252,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    postCollectionHistory: build.mutation<
-      PostCollectionHistoryApiResponse,
-      PostCollectionHistoryApiArg
-    >({
+    postCollectionHistory: build.mutation<PostCollectionHistoryApiResponse, PostCollectionHistoryApiArg>({
       query: (queryArg) => ({
         url: `/collection_history`,
         method: "POST",
@@ -292,10 +265,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteCollectionHistory: build.mutation<
-      DeleteCollectionHistoryApiResponse,
-      DeleteCollectionHistoryApiArg
-    >({
+    deleteCollectionHistory: build.mutation<DeleteCollectionHistoryApiResponse, DeleteCollectionHistoryApiArg>({
       query: (queryArg) => ({
         url: `/collection_history`,
         method: "DELETE",
@@ -316,10 +286,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    patchCollectionHistory: build.mutation<
-      PatchCollectionHistoryApiResponse,
-      PatchCollectionHistoryApiArg
-    >({
+    patchCollectionHistory: build.mutation<PatchCollectionHistoryApiResponse, PatchCollectionHistoryApiArg>({
       query: (queryArg) => ({
         url: `/collection_history`,
         method: "PATCH",
@@ -428,10 +395,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    postFieldTypes: build.mutation<
-      PostFieldTypesApiResponse,
-      PostFieldTypesApiArg
-    >({
+    postFieldTypes: build.mutation<PostFieldTypesApiResponse, PostFieldTypesApiArg>({
       query: (queryArg) => ({
         url: `/field_types`,
         method: "POST",
@@ -444,10 +408,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteFieldTypes: build.mutation<
-      DeleteFieldTypesApiResponse,
-      DeleteFieldTypesApiArg
-    >({
+    deleteFieldTypes: build.mutation<DeleteFieldTypesApiResponse, DeleteFieldTypesApiArg>({
       query: (queryArg) => ({
         url: `/field_types`,
         method: "DELETE",
@@ -462,10 +423,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    patchFieldTypes: build.mutation<
-      PatchFieldTypesApiResponse,
-      PatchFieldTypesApiArg
-    >({
+    patchFieldTypes: build.mutation<PatchFieldTypesApiResponse, PatchFieldTypesApiArg>({
       query: (queryArg) => ({
         url: `/field_types`,
         method: "PATCH",
@@ -557,10 +515,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    getCollectionUserPermissions: build.query<
-      GetCollectionUserPermissionsApiResponse,
-      GetCollectionUserPermissionsApiArg
-    >({
+    getCollectionUserPermissions: build.query<GetCollectionUserPermissionsApiResponse, GetCollectionUserPermissionsApiArg>({
       query: (queryArg) => ({
         url: `/collection_user_permissions`,
         headers: {
@@ -582,10 +537,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    postCollectionUserPermissions: build.mutation<
-      PostCollectionUserPermissionsApiResponse,
-      PostCollectionUserPermissionsApiArg
-    >({
+    postCollectionUserPermissions: build.mutation<PostCollectionUserPermissionsApiResponse, PostCollectionUserPermissionsApiArg>({
       query: (queryArg) => ({
         url: `/collection_user_permissions`,
         method: "POST",
@@ -598,10 +550,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    deleteCollectionUserPermissions: build.mutation<
-      DeleteCollectionUserPermissionsApiResponse,
-      DeleteCollectionUserPermissionsApiArg
-    >({
+    deleteCollectionUserPermissions: build.mutation<DeleteCollectionUserPermissionsApiResponse, DeleteCollectionUserPermissionsApiArg>({
       query: (queryArg) => ({
         url: `/collection_user_permissions`,
         method: "DELETE",
@@ -618,10 +567,7 @@ const injectedRtkApi = api.injectEndpoints({
         },
       }),
     }),
-    patchCollectionUserPermissions: build.mutation<
-      PatchCollectionUserPermissionsApiResponse,
-      PatchCollectionUserPermissionsApiArg
-    >({
+    patchCollectionUserPermissions: build.mutation<PatchCollectionUserPermissionsApiResponse, PatchCollectionUserPermissionsApiArg>({
       query: (queryArg) => ({
         url: `/collection_user_permissions`,
         method: "PATCH",
@@ -675,12 +621,7 @@ export type PostCollectionsApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** collections */
   collections: Collections;
 };
@@ -741,12 +682,7 @@ export type PostProfilesApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** profiles */
   profiles: Profiles;
 };
@@ -805,12 +741,7 @@ export type PostWidgetsApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** widgets */
   widgets: Widgets;
 };
@@ -840,8 +771,7 @@ export type PatchWidgetsApiArg = {
   /** widgets */
   widgets: Widgets;
 };
-export type GetCollectionHistoryApiResponse =
-  /** status 200 OK */ CollectionHistory[];
+export type GetCollectionHistoryApiResponse = /** status 200 OK */ CollectionHistory[];
 export type GetCollectionHistoryApiArg = {
   id?: string;
   collectionId?: string;
@@ -873,12 +803,7 @@ export type PostCollectionHistoryApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** collection_history */
   collectionHistory: CollectionHistory;
 };
@@ -941,12 +866,7 @@ export type PostRowsApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** rows */
   rows: Rows;
 };
@@ -998,12 +918,7 @@ export type PostFieldTypesApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** field_types */
   fieldTypes: FieldTypes;
 };
@@ -1057,12 +972,7 @@ export type PostFieldsApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** fields */
   fields: Fields;
 };
@@ -1094,8 +1004,7 @@ export type PatchFieldsApiArg = {
   /** fields */
   fields: Fields;
 };
-export type GetCollectionUserPermissionsApiResponse =
-  /** status 200 OK */ CollectionUserPermissions[];
+export type GetCollectionUserPermissionsApiResponse = /** status 200 OK */ CollectionUserPermissions[];
 export type GetCollectionUserPermissionsApiArg = {
   id?: string;
   collectionId?: string;
@@ -1123,12 +1032,7 @@ export type PostCollectionUserPermissionsApiArg = {
   /** Filtering Columns */
   select?: string;
   /** Preference */
-  prefer?:
-    | "return=representation"
-    | "return=minimal"
-    | "return=none"
-    | "resolution=ignore-duplicates"
-    | "resolution=merge-duplicates";
+  prefer?: "return=representation" | "return=minimal" | "return=none" | "resolution=ignore-duplicates" | "resolution=merge-duplicates";
   /** collection_user_permissions */
   collectionUserPermissions: CollectionUserPermissions;
 };

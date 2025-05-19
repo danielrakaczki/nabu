@@ -1,5 +1,5 @@
 {
-  "name": "nabu",
+  "name": "com.danielrakaczki.nabu",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "packageManager": "yarn@4.9.1",
@@ -11,16 +11,22 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "build": "eas build --platform ios --profile development",
-    "generate:api": "npx --no-warnings @rtk-query/codegen-openapi openapi-config.cjs"
+    "generate:api": "npx --no-warnings @rtk-query/codegen-openapi openapi-config.cjs",
+    "test:deeplink:ios": "npx uri-scheme open com.danielrakaczki.nabu://test/deep-link --ios",
+    "test:deeplink:android": "npx uri-scheme open com.danielrakaczki.nabu://test/deep-link --android",
+    "get:android:hash": "cd ./android && ./gradlew signingReport"
   },
   "dependencies": {
+    "@expo/fingerprint": "~0.12.4",
     "@expo/vector-icons": "^14.1.0",
+    "@react-native-google-signin/google-signin": "^14.0.1",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.4.2",
     "@react-navigation/native": "^7.1.6",
     "@reduxjs/toolkit": "^2.8.2",
     "@supabase/supabase-js": "^2.49.4",
     "expo": "~53.0.9",
+    "expo-apple-authentication": "~7.2.4",
     "expo-auth-session": "~6.1.5",
     "expo-blur": "~14.1.4",
     "expo-constants": "~17.1.6",

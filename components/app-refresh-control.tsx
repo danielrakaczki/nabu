@@ -4,9 +4,6 @@ export type AppRefreshControlProps = RefreshControlProps & {
   ref?: React.Ref<RefreshControl>;
 };
 
-export const AppRefreshControl = ({
-  children,
-  ...props
-}: AppRefreshControlProps) => {
+export const AppRefreshControl = ({ children, ...props }: AppRefreshControlProps) => {
   return <RefreshControl {...props}>{children}</RefreshControl>;
 };
