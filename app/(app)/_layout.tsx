@@ -10,6 +10,11 @@ export default function AppLayout() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    if (__DEV__ && process.env.EXPO_PUBLIC_QUICK_SIGN_IN && process.env.EXPO_PUBLIC_DEV_EMAIL && process.env.EXPO_PUBLIC_DEV_PASSWORD) {
+      console.log("Quick sign in enabled");
+      supabase.auth.signInWithPassword({ email: process.env.EXPO_PUBLIC_DEV_EMAIL, password: process.env.EXPO_PUBLIC_DEV_PASSWORD }).then(console.log).catch(console.error);
+    }
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       dispatch(setSession(session));
     });
