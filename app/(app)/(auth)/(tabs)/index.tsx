@@ -6,7 +6,7 @@ import { useLogout } from "@/lib/hooks/use-logout";
 import { skipToken } from "@reduxjs/toolkit/query";
 import { Button } from "react-native";
 
-export default function Home() {
+export default function HomeScreen() {
   const { data: collections, error, refetch, isFetching } = useGetCollectionsQuery(skipToken);
   const { logout } = useLogout();
   console.log("error", error);
