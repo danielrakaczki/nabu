@@ -12,22 +12,34 @@ export const FONT_WEIGHTS = {
   black: 900,
 } as const;
 
-export type AppTextProps = TextProps & {
+export type AppTextFontProps = {
   fontFamily?: "Inter" | "InterDisplay";
   fontWeight?: keyof typeof FONT_WEIGHTS | (typeof FONT_WEIGHTS)[keyof typeof FONT_WEIGHTS];
   fontStyle?: "normal" | "italic";
   fontSize?: number;
+  textAlign?: "auto" | "left" | "right" | "center" | "justify";
   /**
    * @default fontSize * 1.25
    */
   lineHeight?: number;
 };
+export type AppTextProps = TextProps & AppTextFontProps;
 
-export const AppText = ({ fontFamily = "Inter", fontWeight: fw = "normal", fontStyle = "normal", fontSize = 16, lineHeight = fontSize * 1.25, style, children, ...props }: AppTextProps) => {
+export const AppText = ({
+  fontFamily = "Inter",
+  fontWeight: fw = "normal",
+  fontStyle = "normal",
+  fontSize = 16,
+  textAlign = "auto",
+  lineHeight = fontSize * 1.25,
+  style,
+  children,
+  ...props
+}: AppTextProps) => {
   const fontWeight = typeof fw === "string" ? FONT_WEIGHTS[fw] : fw;
 
   return (
-    <Text style={[{ fontFamily, fontWeight, fontStyle, lineHeight }, style]} {...props}>
+    <Text style={[{ fontFamily, fontWeight, fontStyle, lineHeight, textAlign }, style]} {...props}>
       {children}
     </Text>
   );
