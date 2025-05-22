@@ -1,8 +1,8 @@
-import { AppButton } from "@/components/app-button";
 import { AppRefreshControl } from "@/components/app-refresh-control";
 import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
 import { CollectionListItem } from "@/components/collection/collection-list-item";
+import { NewCollectionModal } from "@/components/collection/new-collection";
 import { useGetCollectionsQuery } from "@/lib/generatedApi";
 import { StyleSheet, View } from "react-native";
 
@@ -16,12 +16,10 @@ export default function CollectionsScreen() {
       style={styles.container}
       contentContainerStyle={isEmpty ? { flex: 1 } : styles.contentContainer}
     >
+      <NewCollectionModal />
       {(isEmpty || isUninitialized) && (
         <View style={{ marginTop: "auto" }}>
           <AppText>No collections found</AppText>
-          <AppButton color="primary" onPress={refetch}>
-            Refetch
-          </AppButton>
         </View>
       )}
       {data?.map((c) => <CollectionListItem key={c.id} collection={c} viewableIndex={0} />)}

@@ -19,6 +19,7 @@
   "dependencies": {
     "@expo/fingerprint": "~0.12.4",
     "@expo/vector-icons": "^14.1.0",
+    "@gorhom/bottom-sheet": "^5",
     "@react-native-google-signin/google-signin": "^14.0.1",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.4.2",
@@ -54,6 +55,7 @@
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5",
     "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
