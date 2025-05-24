@@ -1,10 +1,11 @@
-import { clearSupabaseStorage, supabase } from "../supabase";
+import { clearSupabaseMMKVSupabaseStorage } from "../store/supabase-store";
+import { supabase } from "../supabase";
 
 export function useLogout() {
   const logout = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
-    clearSupabaseStorage();
+    clearSupabaseMMKVSupabaseStorage();
   };
   return {
     logout,

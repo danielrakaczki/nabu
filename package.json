@@ -71,5 +71,16 @@
     "supabase": "2.23.7",
     "typescript": "~5.8.3"
   },
-  "private": true
+  "private": true,
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "@babel/plugin-proposal-export-namespace-from",
+          "@supabase/ssr",
+          "redux-persist"
+        ]
+      }
+    }
+  }
 }
