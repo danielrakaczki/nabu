@@ -3,6 +3,7 @@
 # dependencies
 node_modules/
 .yarn/
+.yarn/install-state.gz
 
 # Expo
 .expo/
@@ -38,7 +39,7 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-app-example
+app-example/
 
 android/
 ios/
