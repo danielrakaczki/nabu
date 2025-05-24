@@ -3,7 +3,7 @@ import { useAppSelector } from "@/lib/hooks";
 import { BottomSheetBackdrop, BottomSheetBackdropProps, BottomSheetModal, BottomSheetTextInput, BottomSheetView } from "@gorhom/bottom-sheet";
 import * as Crypto from "expo-crypto";
 import { useCallback, useRef, useState } from "react";
-import { Keyboard, StyleSheet, View } from "react-native";
+import { Keyboard, Platform, StyleSheet, View } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AppButton } from "../app-button";
@@ -50,6 +50,8 @@ export const NewCollectionModal = () => {
       });
   };
 
+  const paddingBottom = Platform.OS === "android" ? bottom + 24 : bottom;
+
   return (
     <>
       <AppButton color="primary" onPress={handlePresentPress}>
@@ -62,12 +64,11 @@ export const NewCollectionModal = () => {
         keyboardBlurBehavior="restore"
         keyboardBehavior="interactive"
         backdropComponent={renderBackdrop}
-        containerStyle={{ paddingTop: top }}
         topInset={top + 24}
         backgroundStyle={{ borderRadius: 48 }}
       >
         <GestureDetector gesture={Gesture.Pan().onStart(Keyboard.dismiss)}>
-          <BottomSheetView style={[styles.contentContainer, { gap: 8, padding: 24, paddingTop: 12, paddingBottom: bottom, alignItems: "stretch" }]}>
+          <BottomSheetView style={[styles.contentContainer, { gap: 8, padding: 24, paddingTop: 12, paddingBottom, alignItems: "stretch" }]}>
             <AppText fontFamily="InterDisplay" fontSize={23} fontWeight="black" style={{ marginBottom: 16 }}>
               {isLoading ? "Loading..." : "New Collection"}
             </AppText>
