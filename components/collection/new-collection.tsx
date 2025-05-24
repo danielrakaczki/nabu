@@ -3,7 +3,8 @@ import { useAppSelector } from "@/lib/hooks";
 import { BottomSheetBackdrop, BottomSheetBackdropProps, BottomSheetModal, BottomSheetTextInput, BottomSheetView } from "@gorhom/bottom-sheet";
 import * as Crypto from "expo-crypto";
 import { useCallback, useRef, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { Keyboard, StyleSheet, View } from "react-native";
+import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AppButton } from "../app-button";
 import { AppText } from "../app-text";
@@ -49,7 +50,6 @@ export const NewCollectionModal = () => {
       });
   };
 
-  // renders
   return (
     <>
       <AppButton color="primary" onPress={handlePresentPress}>
@@ -66,31 +66,33 @@ export const NewCollectionModal = () => {
         topInset={top + 24}
         backgroundStyle={{ borderRadius: 48 }}
       >
-        <BottomSheetView style={[styles.contentContainer, { gap: 8, padding: 24, paddingTop: 12, paddingBottom: bottom, alignItems: "stretch" }]}>
-          <AppText fontFamily="InterDisplay" fontSize={23} fontWeight="black" style={{ marginBottom: 16 }}>
-            {isLoading ? "Loading..." : "New Collection"}
-          </AppText>
-          <BottomSheetTextInput
-            placeholder="Collection name"
-            value={name}
-            onChangeText={setName}
-            style={{ backgroundColor: "#f3f3f3", padding: 16, borderRadius: 16, marginBottom: 16 }}
-          />
-          <BottomSheetTextInput
-            placeholder="Collection description"
-            value={description}
-            onChangeText={setDescription}
-            style={{ backgroundColor: "#f3f3f3", padding: 16, borderRadius: 16, marginBottom: 16 }}
-          />
-          <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
-            <AppButton color="tertiary" onPress={handleClosePress}>
-              Cancel
-            </AppButton>
-            <AppButton color="primary" onPress={onCreateCollection}>
-              Create collection
-            </AppButton>
-          </View>
-        </BottomSheetView>
+        <GestureDetector gesture={Gesture.Pan().onStart(Keyboard.dismiss)}>
+          <BottomSheetView style={[styles.contentContainer, { gap: 8, padding: 24, paddingTop: 12, paddingBottom: bottom, alignItems: "stretch" }]}>
+            <AppText fontFamily="InterDisplay" fontSize={23} fontWeight="black" style={{ marginBottom: 16 }}>
+              {isLoading ? "Loading..." : "New Collection"}
+            </AppText>
+            <BottomSheetTextInput
+              placeholder="Collection name"
+              value={name}
+              onChangeText={setName}
+              style={{ backgroundColor: "#f3f3f3", padding: 16, borderRadius: 16, marginBottom: 16 }}
+            />
+            <BottomSheetTextInput
+              placeholder="Collection description"
+              value={description}
+              onChangeText={setDescription}
+              style={{ backgroundColor: "#f3f3f3", padding: 16, borderRadius: 16, marginBottom: 16 }}
+            />
+            <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
+              <AppButton color="tertiary" onPress={handleClosePress}>
+                Cancel
+              </AppButton>
+              <AppButton color="primary" onPress={onCreateCollection}>
+                Create collection
+              </AppButton>
+            </View>
+          </BottomSheetView>
+        </GestureDetector>
       </BottomSheetModal>
     </>
   );
