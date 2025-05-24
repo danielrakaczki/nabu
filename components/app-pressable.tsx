@@ -18,18 +18,21 @@ export const AppPressable = ({ onPressIn, onPressOut, onPress, onLongPress, styl
   const { pressStyle, pressIn, pressOut } = usePressAnimation();
 
   const handlePressIn = () => {
+    "worklet";
     pressIn();
     onPressIn && runOnJS(onPressIn)();
   };
   const handlePressOut = () => {
+    "worklet";
     pressOut();
     onPressOut && runOnJS(onPressOut)();
   };
   const handlePress = () => {
+    "worklet";
     onPress && runOnJS(onPress)();
   };
   const handleLongPress = () => {
-    console.log("Long press");
+    "worklet";
     onLongPress && runOnJS(onLongPress)();
   };
 
