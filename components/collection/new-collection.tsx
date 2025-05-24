@@ -56,18 +56,13 @@ export const NewCollectionModal = () => {
         New collection
       </AppButton>
       <BottomSheetModal
-        detached
         ref={bottomSheetRef}
         enableDynamicSizing
-        enablePanDownToClose={false}
         enableBlurKeyboardOnGesture
-        enableContentPanningGesture={false}
         keyboardBlurBehavior="restore"
-        keyboardBehavior="fillParent"
+        keyboardBehavior="interactive"
         backdropComponent={renderBackdrop}
         containerStyle={{ paddingTop: top }}
-        style={{ marginHorizontal: 24 }}
-        bottomInset={bottom + 24}
         topInset={top + 24}
         backgroundStyle={{ borderRadius: 48 }}
       >
