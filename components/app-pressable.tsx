@@ -10,9 +10,11 @@ export type AppPressableProps = AnimatedProps<ViewProps> & {
   onPressIn?: () => void;
   onPressOut?: () => void;
   onPress?: () => void;
+
+  onLongPress?: () => void;
 };
 
-export const AppPressable = ({ onPressIn, onPressOut, onPress, style, shouldRemovePressStyle, children, ...props }: AppPressableProps) => {
+export const AppPressable = ({ onPressIn, onPressOut, onPress, onLongPress, style, shouldRemovePressStyle, children, ...props }: AppPressableProps) => {
   const { pressStyle, pressIn, pressOut } = usePressAnimation();
 
   const handlePressIn = () => {
@@ -26,11 +28,17 @@ export const AppPressable = ({ onPressIn, onPressOut, onPress, style, shouldRemo
   const handlePress = () => {
     onPress && runOnJS(onPress)();
   };
+  const handleLongPress = () => {
+    console.log("Long press");
+    onLongPress && runOnJS(onLongPress)();
+  };
 
-  const baseGesture = Gesture.Tap().onBegin(handlePressIn).onFinalize(handlePressOut).onStart(handlePress);
+  const tapGesture = Gesture.Tap().onBegin(handlePressIn).onFinalize(handlePressOut).onStart(handlePress);
+  const longPressGesture = Gesture.LongPress().onStart(handleLongPress).onFinalize(handlePressOut);
+  const gesture = Gesture.Race(longPressGesture, tapGesture);
 
   return (
-    <GestureDetector gesture={baseGesture}>
+    <GestureDetector gesture={gesture}>
       <Animated.View style={[shouldRemovePressStyle ? undefined : pressStyle, style]} {...props}>
         {children}
       </Animated.View>

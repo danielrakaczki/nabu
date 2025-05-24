@@ -39,7 +39,7 @@ export const AppText = ({
   const fontWeight = typeof fw === "string" ? FONT_WEIGHTS[fw] : fw;
 
   return (
-    <Text style={[{ fontFamily, fontWeight, fontStyle, lineHeight, textAlign }, style]} {...props}>
+    <Text style={[{ fontSize, fontFamily, fontWeight, fontStyle, lineHeight, textAlign }, style]} {...props}>
       {children}
     </Text>
   );

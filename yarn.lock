@@ -1650,7 +1650,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gorhom/bottom-sheet@npm:^5":
+"@gorhom/bottom-sheet@npm:^5.1.4":
   version: 5.1.4
   resolution: "@gorhom/bottom-sheet@npm:5.1.4"
   dependencies:
@@ -2481,9 +2481,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.49.5":
-  version: 2.49.5
-  resolution: "@supabase/supabase-js@npm:2.49.5"
+"@supabase/supabase-js@npm:^2.49.8":
+  version: 2.49.8
+  resolution: "@supabase/supabase-js@npm:2.49.8"
   dependencies:
     "@supabase/auth-js": "npm:2.69.1"
     "@supabase/functions-js": "npm:2.4.4"
@@ -2491,7 +2491,7 @@ __metadata:
     "@supabase/postgrest-js": "npm:1.19.4"
     "@supabase/realtime-js": "npm:2.11.2"
     "@supabase/storage-js": "npm:2.7.1"
-  checksum: 10c0/b81ec830200bd52b677cc9491f6fbaf8053566f9da31eb5f338bca527d39ff3864d1731e9642412c5ae9ae3d4b7876770eaee1e489927f50ba0949f139c9d9e9
+  checksum: 10c0/53af13c47d6a352995c57a5a9ed9d09710b64c382339ec4b93014ddcdd83d7a8f3b64064b2b9a5b69e35ed6185679f0e070de9d17b522774b505cda96f86518f
   languageName: node
   linkType: hard
 
@@ -3936,14 +3936,14 @@ __metadata:
     "@babel/core": "npm:^7.27.1"
     "@expo/fingerprint": "npm:~0.12.4"
     "@expo/vector-icons": "npm:^14.1.0"
-    "@gorhom/bottom-sheet": "npm:^5"
+    "@gorhom/bottom-sheet": "npm:^5.1.4"
     "@react-native-google-signin/google-signin": "npm:^14.0.1"
     "@react-navigation/bottom-tabs": "npm:^7.3.10"
     "@react-navigation/elements": "npm:^2.4.2"
     "@react-navigation/native": "npm:^7.1.6"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@rtk-query/codegen-openapi": "npm:^2.0.0"
-    "@supabase/supabase-js": "npm:^2.49.5"
+    "@supabase/supabase-js": "npm:^2.49.8"
     "@types/react": "npm:~19.0.10"
     dotenv-flow: "npm:^4.1.0"
     eslint: "npm:^9.27.0"
@@ -3968,10 +3968,10 @@ __metadata:
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     react-native: "npm:0.79.2"
-    react-native-gesture-handler: "npm:~2.24.0"
+    react-native-gesture-handler: "npm:~2.25.0"
     react-native-mmkv: "npm:^3.2.0"
-    react-native-reanimated: "npm:~3.17.4"
-    react-native-safe-area-context: "npm:5.4.0"
+    react-native-reanimated: "npm:~3.17.5"
+    react-native-safe-area-context: "npm:5.4.1"
     react-native-screens: "npm:~4.10.0"
     react-native-url-polyfill: "npm:^2.0.0"
     react-native-web: "npm:~0.20.0"
@@ -3979,7 +3979,7 @@ __metadata:
     react-redux: "npm:^9.2.0"
     redux: "npm:^5.0.1"
     redux-persist: "npm:^6.0.0"
-    supabase: "npm:2.22.12"
+    supabase: "npm:2.23.4"
     typescript: "npm:~5.8.3"
   languageName: unknown
   linkType: soft
@@ -8613,9 +8613,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:~2.24.0":
-  version: 2.24.0
-  resolution: "react-native-gesture-handler@npm:2.24.0"
+"react-native-gesture-handler@npm:~2.25.0":
+  version: 2.25.0
+  resolution: "react-native-gesture-handler@npm:2.25.0"
   dependencies:
     "@egjs/hammerjs": "npm:^2.0.17"
     hoist-non-react-statics: "npm:^3.3.0"
@@ -8623,7 +8623,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/eb2c5cb53690ae5de1482370a156cbd775f6b3054540cd47310ec4712df83a280fe7b6259f372eec4c14a6d7f70ab18f1919a9fe63beaca9ceae126edbe32298
+  checksum: 10c0/95eccc67fb07418ef76b84bcee4b29c16865e78afa367ec82d94b08554cfa7337158ab23937b785bd9a732e62c9c815b294a93d1b2c2cbdc7a8a1e7029f2ba35
   languageName: node
   linkType: hard
 
@@ -8647,7 +8647,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~3.17.4":
+"react-native-reanimated@npm:~3.17.5":
   version: 3.17.5
   resolution: "react-native-reanimated@npm:3.17.5"
   dependencies:
@@ -8671,13 +8671,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:5.4.0":
-  version: 5.4.0
-  resolution: "react-native-safe-area-context@npm:5.4.0"
+"react-native-safe-area-context@npm:5.4.1":
+  version: 5.4.1
+  resolution: "react-native-safe-area-context@npm:5.4.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/729fef1f768d57b905f51882374aa93b209d54576b8a0cf328e0a349c8dc9705ae8f9032e572fd7a7c9e94b588105f44760c0bb15ab9911b7977073d6754b54d
+  checksum: 10c0/6da614f4e9318c784700f0586d19d866f565ae08029c9a38cb1b03fd578af3838f2a6d5321c4a220dc7d698d919faf544536b60e45b7cc97f985349328041de2
   languageName: node
   linkType: hard
 
@@ -9914,9 +9914,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supabase@npm:2.22.12":
-  version: 2.22.12
-  resolution: "supabase@npm:2.22.12"
+"supabase@npm:2.23.4":
+  version: 2.23.4
+  resolution: "supabase@npm:2.23.4"
   dependencies:
     bin-links: "npm:^5.0.0"
     https-proxy-agent: "npm:^7.0.2"
@@ -9924,7 +9924,7 @@ __metadata:
     tar: "npm:7.4.3"
   bin:
     supabase: bin/supabase
-  checksum: 10c0/d735e81b48f35f549b76dd927bcc03c5327cd8815f6d0e2ab3e3d9c37de72a86c7996a89c83977c10a066abc724d8fdd673971a7a0d17335e7d0dab27a4ce9bb
+  checksum: 10c0/5ef85f765b5b6cfccf969896dd3d238bcab3440fdcbacad5e64ad4dc26f518da35f5370e3fd9261773c38fc981e18485e8d2957e0019eb0c518b944dcc4f587d
   languageName: node
   linkType: hard
 
