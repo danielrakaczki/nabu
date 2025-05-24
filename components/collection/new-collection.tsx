@@ -50,7 +50,7 @@ export const NewCollectionModal = () => {
       });
   };
 
-  const paddingBottom = Platform.OS === "android" ? bottom + 24 : bottom;
+  const paddingBottom = Platform.OS === "ios" ? bottom : bottom + 24;
 
   return (
     <>

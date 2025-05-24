@@ -9,18 +9,6 @@ export default function CollectionsLayout() {
           title: "Collections",
         }}
       />
-      {/* <Stack.Screen
-        name="create"
-        options={{
-          title: "Create Collection",
-        }}
-      />
-      <Stack.Screen
-        name="[id]"
-        options={{
-          title: "Collection",
-        }}
-      /> */}
     </Stack>
   );
 }

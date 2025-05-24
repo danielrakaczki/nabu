@@ -1,4 +1,5 @@
 import { Collections, useDeleteCollectionsMutation } from "@/lib/generatedApi";
+import { useRouter } from "expo-router";
 import { Alert } from "react-native";
 import { AppButton } from "../app-button";
 import { AppText } from "../app-text";
@@ -10,6 +11,7 @@ export type CollectionListItemProps = {
 
 export const CollectionListItem = ({ collection }: CollectionListItemProps) => {
   const [deleteCollection, { isLoading }] = useDeleteCollectionsMutation();
+  const router = useRouter();
   console.log("CollectionListItem", collection);
 
   const onDelete = () => {
@@ -37,8 +39,12 @@ export const CollectionListItem = ({ collection }: CollectionListItemProps) => {
     ]);
   };
 
+  const onNavigateToDetails = () => {
+    router.push({ pathname: "/[id]", params: { id: collection.id } });
+  };
+
   return (
-    <AppButton color="primary" onLongPress={onDelete}>
+    <AppButton color="primary" onPress={onNavigateToDetails} onLongPress={onDelete}>
       <AppText>{isLoading ? "Deleting..." : collection.name}</AppText>
     </AppButton>
   );
