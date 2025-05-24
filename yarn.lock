@@ -3979,7 +3979,7 @@ __metadata:
     react-redux: "npm:^9.2.0"
     redux: "npm:^5.0.1"
     redux-persist: "npm:^6.0.0"
-    supabase: "npm:2.23.4"
+    supabase: "npm:2.23.7"
     typescript: "npm:~5.8.3"
   languageName: unknown
   linkType: soft
@@ -9914,9 +9914,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supabase@npm:2.23.4":
-  version: 2.23.4
-  resolution: "supabase@npm:2.23.4"
+"supabase@npm:2.23.7":
+  version: 2.23.7
+  resolution: "supabase@npm:2.23.7"
   dependencies:
     bin-links: "npm:^5.0.0"
     https-proxy-agent: "npm:^7.0.2"
@@ -9924,7 +9924,7 @@ __metadata:
     tar: "npm:7.4.3"
   bin:
     supabase: bin/supabase
-  checksum: 10c0/5ef85f765b5b6cfccf969896dd3d238bcab3440fdcbacad5e64ad4dc26f518da35f5370e3fd9261773c38fc981e18485e8d2957e0019eb0c518b944dcc4f587d
+  checksum: 10c0/6be65e2a491724ab076f6aa21c52c9ccd707ea93abe61f3ca81f57f747378143c0adcf1b03a0a47601a472b5926d4e9c28d55259e9ebcebf796f39248f507343
   languageName: node
   linkType: hard
 
