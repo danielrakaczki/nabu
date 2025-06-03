@@ -13,6 +13,7 @@ export default function TabsLayout() {
         name="(collections)"
         options={{
           headerShown: false,
+          title: "Collections",
         }}
       />
       <Tabs.Screen

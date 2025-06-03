@@ -3,11 +3,10 @@ import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
 import { useGetCollectionsQuery } from "@/lib/generatedApi";
 import { useLogout } from "@/lib/hooks/use-logout";
-import { skipToken } from "@reduxjs/toolkit/query";
 import { Button } from "react-native";
 
 export default function HomeScreen() {
-  const { data: collections, error, refetch, isFetching } = useGetCollectionsQuery(skipToken);
+  const { data: collections, error, refetch, isFetching } = useGetCollectionsQuery({});
   const { logout } = useLogout();
   console.log("error", error);
 
