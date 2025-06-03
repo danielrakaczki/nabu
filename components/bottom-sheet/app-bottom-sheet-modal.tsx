@@ -21,7 +21,7 @@ export const AppBottomSheetModal = ({ ref, children, bottomSheetViewStyle, ...pr
   return (
     <BottomSheetModal
       ref={ref}
-      index={0}
+      index={-1}
       enableDynamicSizing
       enableBlurKeyboardOnGesture
       keyboardBlurBehavior="restore"
