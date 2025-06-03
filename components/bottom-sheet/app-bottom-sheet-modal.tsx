@@ -1,6 +1,6 @@
 import { BottomSheetBackdrop, type BottomSheetBackdropProps, BottomSheetModal, type BottomSheetModalProps, BottomSheetView } from "@gorhom/bottom-sheet";
 import { type BottomSheetViewProps } from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheetView/types";
-import { PropsWithChildren, useCallback } from "react";
+import { type PropsWithChildren, useCallback } from "react";
 import { Keyboard, Platform, StyleSheet } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -21,7 +21,6 @@ export const AppBottomSheetModal = ({ ref, children, bottomSheetViewStyle, ...pr
   return (
     <BottomSheetModal
       ref={ref}
-      index={-1}
       enableDynamicSizing
       enableBlurKeyboardOnGesture
       keyboardBlurBehavior="restore"
@@ -39,12 +38,6 @@ export const AppBottomSheetModal = ({ ref, children, bottomSheetViewStyle, ...pr
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-    justifyContent: "center",
-    backgroundColor: "grey",
-  },
   contentContainer: {
     gap: 8,
     padding: 24,
