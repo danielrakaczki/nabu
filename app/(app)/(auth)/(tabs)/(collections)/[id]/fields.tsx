@@ -1,5 +1,6 @@
 import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
+import { NewFieldModal } from "@/components/collection/new-field";
 import { useGetFieldsQuery } from "@/lib/generatedApi";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { StyleSheet } from "react-native";
@@ -17,6 +18,7 @@ export default function CollectionDetailsFieldsScreen() {
         {isLoading && <AppText>Loading fields...</AppText>}
         {existingFields?.map((field) => <AppText key={field.id}>{JSON.stringify(field, undefined, 3)}</AppText>)}
       </AppScrollView>
+      <NewFieldModal />
     </>
   );
 }
