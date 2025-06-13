@@ -1,8 +1,8 @@
 import { BottomSheetBackdrop, type BottomSheetBackdropProps, BottomSheetModal, type BottomSheetModalProps, BottomSheetView } from "@gorhom/bottom-sheet";
 import { type BottomSheetViewProps } from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheetView/types";
 import { type PropsWithChildren, useCallback } from "react";
-import { Keyboard, Platform, StyleSheet } from "react-native";
-import { Gesture, GestureDetector } from "react-native-gesture-handler";
+import { Platform, StyleSheet } from "react-native";
+import { KeyboardGestureArea } from "react-native-keyboard-controller";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export type AppBottomSheetModalProps = PropsWithChildren<
@@ -30,9 +30,9 @@ export const AppBottomSheetModal = ({ ref, children, bottomSheetViewStyle, ...pr
       backgroundStyle={{ borderRadius: 48 }}
       {...props}
     >
-      <GestureDetector gesture={Gesture.Pan().onStart(Keyboard.dismiss)}>
-        <BottomSheetView style={[styles.contentContainer, { paddingBottom }, bottomSheetViewStyle]}>{children}</BottomSheetView>
-      </GestureDetector>
+      <KeyboardGestureArea interpolator="ios">
+        <BottomSheetView style={StyleSheet.flatten([styles.contentContainer, { paddingBottom }, bottomSheetViewStyle])}>{children}</BottomSheetView>
+      </KeyboardGestureArea>
     </BottomSheetModal>
   );
 };

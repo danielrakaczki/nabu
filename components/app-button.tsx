@@ -60,9 +60,8 @@ export const AppButton = ({
 
   return (
     <AppPressable
-      pointerEvents={isDisabled ? "none" : "auto"}
       shouldRemovePressStyle={isDisabled}
-      style={StyleSheet.flatten([shouldRemoveBaseStyle ? undefined : baseStyle, style])}
+      style={StyleSheet.flatten([shouldRemoveBaseStyle ? undefined : baseStyle, { pointerEvents: isDisabled ? "none" : "auto" }, style])}
       onPressIn={handlePressIn}
       {...props}
     >
