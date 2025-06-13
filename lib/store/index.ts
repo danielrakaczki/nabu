@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { generatedApiEnhanced } from "../generateApiEnhance";
+import { generatedApiEnhanced } from "../generate-api-enhance";
 import { authSlice } from "./auth-slice";
 
 export const store = configureStore({

@@ -1,4 +1,5 @@
-require("dotenv-flow").config();
+const path = require("path");
+require("dotenv").config({ path: path.resolve(process.cwd(), ".env.development") });
 
 const baseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
 if (!baseUrl) {
@@ -6,10 +7,10 @@ if (!baseUrl) {
 }
 
 module.exports = {
-  schemaFile: `https://mnpporglidnwszwmwjth.supabase.co/rest/v1/?openapi`,
-  apiFile: "./lib/emptyApi.ts",
+  schemaFile: `${baseUrl}/rest/v1/?openapi`,
+  apiFile: "./lib/empty-api.ts",
   apiImport: "emptySplitApi",
-  outputFile: "./lib/generatedApi.ts",
+  outputFile: "./lib/generated-api.ts",
   exportName: "generatedApi",
   hooks: true,
   httpResolverOptions: {

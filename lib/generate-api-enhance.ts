@@ -1,4 +1,4 @@
-import { generatedApi } from "./generatedApi";
+import { generatedApi } from "./generated-api";
 
 export const generatedApiEnhanced = generatedApi.enhanceEndpoints({
   addTagTypes: ["Collections"],
