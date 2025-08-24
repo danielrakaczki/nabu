@@ -1,4 +1,4 @@
-import { usePostCollectionsMutation } from "@/lib/generatedApi";
+import { usePostCollectionsMutation } from "@/lib/generated-api";
 import { useAppSelector } from "@/lib/hooks";
 import { BottomSheetTextInput } from "@gorhom/bottom-sheet";
 import * as Crypto from "expo-crypto";

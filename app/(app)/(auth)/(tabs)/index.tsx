@@ -1,7 +1,7 @@
 import { AppRefreshControl } from "@/components/app-refresh-control";
 import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
-import { useGetCollectionsQuery } from "@/lib/generatedApi";
+import { useGetCollectionsQuery } from "@/lib/generated-api";
 import { useLogout } from "@/lib/hooks/use-logout";
 import { Button } from "react-native";
 

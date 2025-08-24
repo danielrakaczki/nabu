@@ -1,4 +1,4 @@
-import { Collections, useDeleteCollectionsMutation } from "@/lib/generatedApi";
+import { Collections, useDeleteCollectionsMutation } from "@/lib/generated-api";
 import { useRouter } from "expo-router";
 import { Alert } from "react-native";
 import { AppButton } from "../app-button";

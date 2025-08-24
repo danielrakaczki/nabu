@@ -1,4 +1,4 @@
-import { FieldTypes, useGetFieldTypesQuery } from "@/lib/generatedApi";
+import { FieldTypes, useGetFieldTypesQuery } from "@/lib/generated-api";
 import { useCallback, useState } from "react";
 import { Dimensions, StyleSheet } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";

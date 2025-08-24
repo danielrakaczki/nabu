@@ -1,7 +1,7 @@
 import { AppButton } from "@/components/app-button";
 import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
-import { useGetCollectionsQuery } from "@/lib/generatedApi";
+import { useGetCollectionsQuery } from "@/lib/generated-api";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { StyleSheet } from "react-native";
 

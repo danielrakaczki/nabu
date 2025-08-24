@@ -3,7 +3,7 @@ import { AppScrollView } from "@/components/app-scroll-view";
 import { AppText } from "@/components/app-text";
 import { CollectionListItem } from "@/components/collection/collection-list-item";
 import { NewCollectionModal } from "@/components/collection/new-collection";
-import { useGetCollectionsQuery } from "@/lib/generatedApi";
+import { useGetCollectionsQuery } from "@/lib/generated-api";
 import { StyleSheet, View } from "react-native";
 
 export default function CollectionsScreen() {
@@ -22,7 +22,9 @@ export default function CollectionsScreen() {
           <AppText>No collections found</AppText>
         </View>
       )}
-      {data?.map((c) => <CollectionListItem key={c.id} collection={c} viewableIndex={0} />)}
+      {data?.map((c) => (
+        <CollectionListItem key={c.id} collection={c} viewableIndex={0} />
+      ))}
     </AppScrollView>
   );
 }
